@@ -739,6 +739,7 @@ exports.LoadUtils = () => {
             model.formattedTitle = chat.formattedTitle;
         }
 
+        /*
         if (chat.groupMetadata) {
             model.isGroup = true;
             const chatWid = window.require('WAWebWidFactory').createWid(chat.id._serialized);
@@ -757,6 +758,7 @@ exports.LoadUtils = () => {
             model.channelMetadata = chat.newsletterMetadata.serialize();
             model.channelMetadata.createdAtTs = chat.newsletterMetadata.creationTime;
         }
+        */
 
         model.lastMessage = null;
         if (model.msgs && model.msgs.length) {
@@ -766,7 +768,7 @@ exports.LoadUtils = () => {
             lastMessage && (model.lastMessage = window.WWebJS.getMessageModel(lastMessage));
         }
 
-        delete model.msgs;
+        model.msgs = [];
         delete model.msgUnsyncedButtonReplyMsgs;
         delete model.unsyncedButtonReplies;
 
