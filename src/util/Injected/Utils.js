@@ -947,7 +947,7 @@ exports.LoadUtils = () => {
             model.formattedTitle = chat.formattedTitle;
         }
 
-        if (chat.groupMetadata) {
+        /*if (chat.groupMetadata) {
             model.isGroup = true;
             const chatWid = window
                 .require('WAWebWidFactory')
@@ -966,6 +966,7 @@ exports.LoadUtils = () => {
             model.groupMetadata = chat.groupMetadata.serialize();
             model.isReadOnly = chat.groupMetadata.announce;
         }
+        */
 
         if (chat.newsletterMetadata) {
             const newsletterMetadata =
